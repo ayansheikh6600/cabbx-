@@ -23,21 +23,18 @@ import CoachTravelWidget from "@/components/widgets/CoachTravelWidget";
 import AirportServices from "@/components/widgets/AirportServices";
 import ContactForm from "@/components/widgets/ContactForm";
 import CarCard from "@/components/shared/CarCard";
+import FilterComponent from "@/components/shared/FilterComponent";
 
 export default function Home() {
   return (
     <>
-      <div className="w-full mx-auto">
-        <div className="container">
-          <Navbar />
-        </div>
-        <hr />
+      
         <div className="container mt-4 flex flex-col gap-10">
           <div>
             <div className="">
               <Hero />
             </div>
-            <div className="relative mt-[-160px] z-50">
+            <div className="relative mt-[-100px] md:mt-[-160px] z-50">
               <CabHire />
             </div>
           </div>
@@ -50,10 +47,9 @@ export default function Home() {
           <StationSection />
           <AirportServices/>
           <ContactForm/>
-          <CarCard/>
+          
         </div>
-      </div>
-      <Footer />
+
     </>
   );
 }

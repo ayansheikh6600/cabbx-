@@ -78,13 +78,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="">
+    <div className="container">
       <div className="flex justify-between items-center p-3">
         <div>
           <Image src={'/layer-2-1@2x.png'} alt="" width={128} height={20} />
         </div>
         <div>
-          <ul className="flex items-center gap-6">
+          <div className="hidden lg:block">
+            <ul className="flex items-center gap-6">
             <li>Home</li>
             <li>
               <NavDropDown data={data.airportRuns} />
@@ -102,6 +103,8 @@ const Navbar = () => {
             <li>Blog</li>
             <Button className="bg-orange text-white">Signup</Button>
           </ul>
+          </div>
+          
         </div>
       </div>
     </div>
