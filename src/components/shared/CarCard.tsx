@@ -8,19 +8,21 @@ const CarCard = ({...props}) => {
 
   return (
     <div className="w-fit rounded-lg overflow-hidden shadow-lg bg-white border border-gray-300">
-      <div className="relative bg-orange p-4">
-        <h2 className="text-white text-xl font-bold">{props?.data?.title|| "Estate"}</h2>
+      <div className="relative bg-white">
+          
+        <Image className="absolute z-40 w-full" src={"/rectangle-439.svg"} alt="" width={100} height={100}/>
+        <h2 className="text-white text-xl font-bold relative z-50 p-4">{props?.data?.title|| "Estate"}</h2>
         <Image
           className="w-[80%] mx-auto h-auto mt-4 z-50 relative"
           src={props?.data?.image || "/images/MVPCar.png"}
-          width={80}
+          width={160}
           height={80}
           alt="Car"
         />
-        <div className="text-center text-2xl font-bold text-red-500 z-50 relative">
+        <div className="text-center text-2xl font-bold text-red-500 z-50 relative mt-6">
           ${props?.data?.price||"200"} <span className="text-sm text-gray-600">from</span>
         </div>
-        <div className="absolute bottom-0 right-0 transform translate-x-1.5/2 translate-y-1.5/2 w-full h-6 border-r-[395px] border-orange bg-white border-r-transparent border-t-[150px] "></div>
+        {/* <div className="absolute bottom-0 right-0 transform translate-x-1.5/2 translate-y-1.5/2 w-full h-6 border-r-[395px] border-orange bg-white border-r-transparent border-t-[150px] "></div> */}
       </div>
       <hr />
       <div className="px-4 py-4">

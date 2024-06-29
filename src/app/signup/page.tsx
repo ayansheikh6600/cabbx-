@@ -1,4 +1,5 @@
 "use client"
+import LoginModal from '@/components/Modals/LoginModal'
 import RegisterWidget from '@/components/widgets/Registration'
 import React from 'react'
 
@@ -11,7 +12,8 @@ const page = () => {
                 </h2>
                 <div className='text-end'>
                     <span className='font-semibold '>
-                        Already have an Account? <span className='underline text-orange font-semibold'>Login</span>
+                        Already have an Account? <span className='underline text-orange font-semibold'><LoginModal/></span>
+                        
                     </span>
                 </div>
             </div>

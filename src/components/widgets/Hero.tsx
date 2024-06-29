@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 const Hero = () => {
   return (
     <div className="relative w-full">
-      <Image height={300} src={HeroBack} className="w-full " alt="Hero Background" />
+      <Image height={300} src={"/mainpage3.gif"} width={100} className="w-full " alt="Hero Background" />
       <div className="absolute inset-y-0 left-0 flex items-center   ml-8">
         <div className="text-left w-[90%] md:w-[60%] flex flex-col gap-3">
           <h1 className="text-2xl md:text-5xl bg-gradient-custom-primary inline-block text-transparent bg-clip-text font-plus-jakarta font-extrabold">

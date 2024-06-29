@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { FaEye, FaEyeSlash, FaEnvelope, FaUser, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import PasswordField from '../shared/PasswordFeild';
 
 interface InputFieldProps {
   type: string;
@@ -27,43 +28,7 @@ const InputField: React.FC<InputFieldProps> = ({ type, placeholder, icon: Icon, 
   </div>
 );
 
-interface PasswordFieldProps {
-  placeholder: string;
-  value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  name: string;
-}
 
-const PasswordField: React.FC<PasswordFieldProps> = ({ placeholder, value, onChange, name }) => {
-  const [showPassword, setShowPassword] = useState(false);
-  const toggleShowPassword = () => setShowPassword(!showPassword);
-
-  return (
-    <div className="relative flex items-center mb-4">
-      <div className="absolute inset-y-0 left-0 flex items-center p-4 m-1 rounded-md bg-secondary">
-        <FaEnvelope className="text-white" />
-      </div>
-      <input
-        type={showPassword ? 'text' : 'password'}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        name={name}
-        className="w-full h-full pl-14 pr-4 py-4 border rounded focus:outline-none focus:ring-2 focus:ring-secondary"
-      />
-      <div
-        className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
-        onClick={toggleShowPassword}
-      >
-        {showPassword ? (
-          <FaEyeSlash className="text-gray-500" />
-        ) : (
-          <FaEye className="text-gray-500" />
-        )}
-      </div>
-    </div>
-  );
-};
 
 const RegisterWidget: React.FC = () => {
   const [formData, setFormData] = useState({
