@@ -17,6 +17,7 @@ const Navbar = () => {
   const data = {
     airportRuns: {
       title: "Airport Runs",
+      path : "airport",
       runs: [
         {name:"Biggin Hill Airport",icon:<BsFillAirplaneFill/>},
         {name:"Birmingham Airport",icon:<BsFillAirplaneFill/>},
@@ -32,6 +33,7 @@ const Navbar = () => {
     },
     stationRuns: {
       title: "Station Runs",
+      path : "station",
       runs: [
         {name:"Paddington Station",icon:<BsTrainFrontFill/>},
         {name:"Euston Station",icon:<BsTrainFrontFill/>},
@@ -44,6 +46,7 @@ const Navbar = () => {
     },
     cruiseRuns: {
       title: "Cruise Runs",
+      path : "cruise",
       runs: [
         {name:"Harwich seaport",icon:<RiShip2Fill/>},
         {name:"Dover seaport",icon:<RiShip2Fill/>},

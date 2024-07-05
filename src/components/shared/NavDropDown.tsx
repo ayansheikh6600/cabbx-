@@ -6,6 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { IoIosArrowDown } from "react-icons/io";
+import Link from "next/link";
 
 const NavDropDown = ({ data }: any) => {
   return (
@@ -23,7 +24,8 @@ const NavDropDown = ({ data }: any) => {
             key={index}
             className="focus:bg-orange focus:text-white p-2"
           >
-            <span className="flex gap-2 items-center">{item?.icon}{item?.name}</span>
+            <Link href={data?.path}>
+            <span className="flex gap-2 items-center">{item?.icon}{item?.name}</span></Link>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

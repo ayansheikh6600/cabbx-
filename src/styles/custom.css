@@ -11,6 +11,9 @@
 .bg-gradient-golden-secondary{
     @apply bg-gradient-to-r from-golden-light to-secondary;
 }
+.bg-gradient-hero{
+    @apply bg-gradient-to-r from-[#221d1a9d] to-[#352f2ba4];
+}
 
 
 /* Add this CSS in your global styles or a suitable CSS module */
